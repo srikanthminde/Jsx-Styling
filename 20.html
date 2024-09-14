@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script type="text/babel">
+          
+      var students = [
+        {
+          firstname:"Praveen",
+          lastname:"Gubbala",
+          age:40,
+          gender:"male"
+        },
+        {
+          firstname:"Smrithi",
+          lastname:"mandana",
+          age:25,
+          gender:'female'
+        },
+        {
+          firstname:"mithali",
+          lastname:"raj",
+          age:39,
+          gender:'female'
+        },
+        {
+          firstname:"Rohit",
+          lastname:"Sharma",
+          age:35,
+          gender:'male'
+        },
+        {
+          firstname:"Sachin",
+          lastname:"Tendulkar",
+          age:50,
+          gender:'male'
+        },
+    ]
+        var jsh1=<div>
+            <table border="1">
+                {
+                    students.map((x)=>{
+                        return(
+                            <tr style={{backgroundColor: x.gender==="male"?("lightblue"):("lightpink")}}>
+                               <td>{x.firstname}</td> 
+                               <td>{x.lastname}</td> 
+                               <td>{x.age}</td> 
+                               <td>{x.gender}</td> 
+                                
+                                
+                                
+                                </tr>
+                        )
+                    })
+                }
+                
+                </table>
+            </div>
+            ReactDOM.render(jsh1,document.getElementById("root"))
+    </script>
+</html>

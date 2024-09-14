@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+         
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script type="text/babel">
+         var maleimage="https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg";
+         var femaleimage="https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png";
+    
+
+         var students = [
+        {
+          firstname:"Praveen",
+          lastname:"Gubbala",
+          age:40,
+          gender:"male"
+        },
+        {
+          firstname:"Smrithi",
+          lastname:"mandana",
+          age:25,
+          gender:'female'
+        },
+        {
+          firstname:"mithali",
+          lastname:"raj",
+          age:39,
+          gender:'female'
+        },
+        {
+          firstname:"Rohit",
+          lastname:"Sharma",
+          age:35,
+          gender:'male'
+        },
+        {
+          firstname:"Sachin",
+          lastname:"Tendulkar",
+          age:50,
+          gender:'male'
+        },
+    ]
+        var jsh1=<div style={{display:"flex",flexwrap:"wrap"}}>
+          <div style={{flexwrap:"wrap",border:"1px"}}></div>
+          <div style={{border:"2px",width:"200",padding:"10",margin:"10"}}>
+            
+          
+                {
+                    students.map((x)=>{
+                        return (
+                          <ul style={{backgroundColor:(x.gender==="male"?("lightblue"):("lightpink"))}}>
+                        <h4 Name firstname>{x.firstname}</h4>
+                        <h4 Name lastname>{x.lastname}</h4>
+                        <h4 age>{x.age}</h4>
+                        <h4 gender>{x.gender}</h4>
+                        <h4><img src={(x.gender==="male"?(maleimage):(femaleimage))} width="100px"/></h4>
+                        </ul>
+                        
+                    )
+
+                    })
+                }
+              </div>
+              </div>
+              
+            
+            ReactDOM.render(jsh1,document.getElementById("root"))        
+    </script>
+</html>

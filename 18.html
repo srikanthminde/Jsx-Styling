@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script type="text/babel">
+        var ar=["9","12","7","15","20","23","18","1"]
+        var jsh1=<div>{
+            ar.map((x)=>{
+                return <li style={{color:ar.length%2===0?("green"):("red")}}>{x}</li>
+            })
+        }</div>
+        ReactDOM.render(jsh1,document.getElementById("root"))
+    </script>
+</html>
